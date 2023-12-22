@@ -1,0 +1,68 @@
+﻿@page
+@model LB_2.Pages.Processors.DetailsModel
+
+<div>
+    <h4>Processor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.Name)
+        </dd>
+        @* <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.Image)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.Image)
+        </dd> *@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.SocketType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.SocketType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.ProcessorFamily)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.ProcessorFamily)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.ProcessorGeneration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.ProcessorGeneration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.NumCores)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.NumCores)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.NumThreads)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.NumThreads)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.ClockFrequency)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.ClockFrequency)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.Price)
+        </dd>
+    </dl>
+</div>
+
+<div class="ms-5">
+    <a asp-page="./Edit" asp-route-id="@Model.Processor.Id" class="btn btn-success me-md-2">Edit</a> 
+    <a asp-page="./Index" class="btn btn-primary">Back to List</a>
+</div>

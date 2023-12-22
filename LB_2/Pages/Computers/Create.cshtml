@@ -1,0 +1,54 @@
+﻿@page
+@model LB_2.Pages.Computers.CreateModel
+
+<h4>Computer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Computer.Name" class="control-label"></label>
+                <input asp-for="Computer.Name" class="form-control" />
+                <span asp-validation-for="Computer.Name" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+            <label asp-for="Processor.Image" class="control-label"></label>
+            <input asp-for="Processor.Image" class="form-control" />
+            <span asp-validation-for="Processor.Image" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="Computer.CreatedDate" class="control-label"></label>
+                <input asp-for="Computer.CreatedDate" class="form-control" />
+                <span asp-validation-for="Computer.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computer.LastUpdatedDate" class="control-label"></label>
+                <input asp-for="Computer.LastUpdatedDate" class="form-control" />
+                <span asp-validation-for="Computer.LastUpdatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computer.ComponentComputerId" class="control-label"></label>
+                <input asp-for="Computer.ComponentComputerId" class="form-control" />
+                <span asp-validation-for="Computer.ComponentComputerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Computer.Price" class="control-label"></label>
+                <input asp-for="Computer.Price" class="form-control" />
+                <span asp-validation-for="Computer.Price" class="text-danger"></span>
+            </div>
+           
+            <div class="my-4 ms-5">
+                <div class="d-grid gap-2   d-md-flex ms-5">
+                    <input type="submit" value="Create" class="btn btn-success me-md-2 col-3"></input>
+                    <a asp-page="Index" class="btn btn-primary col-3">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

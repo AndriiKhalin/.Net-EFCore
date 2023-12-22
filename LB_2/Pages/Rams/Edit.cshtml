@@ -1,0 +1,61 @@
+﻿@page
+@model LB_2.Pages.Rams.EditModel
+
+<h4>Ram</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Ram.Id" />
+            
+            <div class="form-group">
+                <label asp-for="Ram.Id" class="control-label"></label>
+                <input readonly class="form-control-plaintext" value="@Model.Ram.Id" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Ram.Name" class="control-label"></label>
+                <input asp-for="Ram.Name" class="form-control" />
+                <span asp-validation-for="Ram.Name" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="Processor.Image" class="control-label"></label>
+                <input asp-for="Processor.Image" class="form-control" />
+                <span asp-validation-for="Processor.Image" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="Ram.TypeMemory" class="control-label"></label>
+                <input asp-for="Ram.TypeMemory" class="form-control" />
+                <span asp-validation-for="Ram.TypeMemory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ram.Size" class="control-label"></label>
+                <input asp-for="Ram.Size" class="form-control" />
+                <span asp-validation-for="Ram.Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ram.OperatingFrequency" class="control-label"></label>
+                <input asp-for="Ram.OperatingFrequency" class="form-control" />
+                <span asp-validation-for="Ram.OperatingFrequency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ram.Price" class="control-label"></label>
+                <input asp-for="Ram.Price" class="form-control" />
+                <span asp-validation-for="Ram.Price" class="text-danger"></span>
+            </div>
+            
+            <div class="my-4 ms-5">
+                <div class="d-grid gap-2   d-md-flex ms-5">
+                    <input type="submit" value="Save" class="btn btn-success me-md-2 col-3"/>
+                    <a asp-page="Index" class="btn btn-primary col-3">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

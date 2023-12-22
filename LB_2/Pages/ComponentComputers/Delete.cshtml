@@ -1,0 +1,84 @@
+﻿@page
+@model LB_2.Pages.ComponentComputers.DeleteModel
+
+
+@* <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="deleteSwitch" />
+    <label class="form-check-label">Enable Delete</label>
+</div>
+<hr /> *@
+<partial name="Feature/DeleteSwitch" model="new LB_2.Pages.DeleteSwitchModel()" />
+
+<div>
+    <hr/>
+    <h4>ComponentComputer</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ComponentComputer.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComponentComputer.Id)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ComponentComputer.ProcessorId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComponentComputer.ProcessorId)
+        </dd>
+        @* <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Processor.Image)
+        </dt>
+        <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Processor.Image)
+        </dd> *@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ComponentComputer.MotherBoardId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComponentComputer.MotherBoardId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ComponentComputer.HardDriveId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComponentComputer.HardDriveId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ComponentComputer.VideoCardId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComponentComputer.VideoCardId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ComponentComputer.RamId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComponentComputer.RamId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ComponentComputer.UnitId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComponentComputer.UnitId)
+        </dd>
+        @* <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ComponentComputer.Computers\)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ComponentComputer.Computers.AsEnumerable().GetEnumerator().Current.Name)
+        </dd> *@
+    </dl>
+
+    <form method="post" class="ms-5">
+        <input type="hidden" asp-for="ComponentComputer.Id" />
+
+        <input type="submit" id="deleteButton" value="Delete" class="btn btn-danger me-md-2" disabled />
+        <a asp-page="./Index" class="btn btn-primary">Back to List</a>
+    </form>
+</div>
+@section Scripts
+{
+    <script src="~/js/deleteSwitch.js"></script>
+}

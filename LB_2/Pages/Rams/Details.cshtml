@@ -1,0 +1,58 @@
+﻿@page
+@model LB_2.Pages.Rams.DetailsModel
+
+<div>
+    <h4>Ram</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ram.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ram.Id)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ram.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ram.Name)
+        </dd>
+        @* <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.Image)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.Image)
+        </dd> *@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ram.TypeMemory)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ram.TypeMemory)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ram.Size)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ram.Size)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ram.OperatingFrequency)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ram.OperatingFrequency)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ram.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ram.Price)
+        </dd>
+    </dl>
+</div>
+
+<div class="ms-5">
+    <a asp-page="./Edit" asp-route-id="@Model.Ram.Id" class="btn btn-success me-md-2">Edit</a> 
+    <a asp-page="./Index" class="btn btn-primary">Back to List</a>
+</div>

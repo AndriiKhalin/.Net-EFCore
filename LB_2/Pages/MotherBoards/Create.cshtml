@@ -1,0 +1,54 @@
+﻿@page
+@model LB_2.Pages.MotherBoards.CreateModel
+
+<h4>MotherBoard</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MotherBoard.Name" class="control-label"></label>
+                <input asp-for="MotherBoard.Name" class="form-control" />
+                <span asp-validation-for="MotherBoard.Name" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+            <label asp-for="Processor.Image" class="control-label"></label>
+            <input asp-for="Processor.Image" class="form-control" />
+            <span asp-validation-for="Processor.Image" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="MotherBoard.FormFactor" class="control-label"></label>
+                <input asp-for="MotherBoard.FormFactor" class="form-control" />
+                <span asp-validation-for="MotherBoard.FormFactor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotherBoard.Chipset" class="control-label"></label>
+                <input asp-for="MotherBoard.Chipset" class="form-control" />
+                <span asp-validation-for="MotherBoard.Chipset" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotherBoard.Socket" class="control-label"></label>
+                <input asp-for="MotherBoard.Socket" class="form-control" />
+                <span asp-validation-for="MotherBoard.Socket" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotherBoard.Price" class="control-label"></label>
+                <input asp-for="MotherBoard.Price" class="form-control" />
+                <span asp-validation-for="MotherBoard.Price" class="text-danger"></span>
+            </div>
+           
+            <div class="my-4 ms-5">
+                <div class="d-grid gap-2   d-md-flex ms-5">
+                    <input type="submit" value="Create" class="btn btn-success me-md-2 col-3"></input>
+                    <a asp-page="Index" class="btn btn-primary col-3">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

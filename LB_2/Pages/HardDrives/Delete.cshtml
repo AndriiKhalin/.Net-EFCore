@@ -1,0 +1,70 @@
+﻿@page
+@model LB_2.Pages.HardDrives.DeleteModel
+
+
+@* <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="deleteSwitch" />
+    <label class="form-check-label">Enable Delete</label>
+</div>
+<hr /> *@
+<partial name="Feature/DeleteSwitch" model="new LB_2.Pages.DeleteSwitchModel()" />
+<div>
+    <h4>HardDrive</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDrive.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDrive.Id)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDrive.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDrive.Name)
+        </dd>
+        @* <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.Image)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.Image)
+        </dd> *@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDrive.HardDriveType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDrive.HardDriveType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDrive.StorageSize)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDrive.StorageSize)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDrive.ReadWriteSpeed)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDrive.ReadWriteSpeed)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HardDrive.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HardDrive.Price)
+        </dd>
+    </dl>
+    
+    <form method="post" class="ms-5">
+        <input type="hidden" asp-for="HardDrive.Id" />
+
+        <input type="submit" id="deleteButton" value="Delete" class="btn btn-danger me-md-2" disabled />
+        <a asp-page="./Index" class="btn btn-primary">Back to List</a>
+    </form>
+</div>
+@section Scripts
+{
+    <script src="~/js/deleteSwitch.js"></script>
+}

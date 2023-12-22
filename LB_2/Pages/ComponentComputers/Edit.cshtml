@@ -1,0 +1,73 @@
+﻿@page
+@model LB_2.Pages.ComponentComputers.EditModel
+
+<h4>ComponentComputer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ComponentComputer.Id" />
+            
+            <div class="form-group">
+                <label asp-for="ComponentComputer.Id" class="control-label"></label>
+                <input readonly class="form-control-plaintext" value="@Model.ComponentComputer.Id" />
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="ComponentComputer.Name" class="control-label"></label>
+                <input asp-for="ComponentComputer.Name" class="form-control" />
+                <span asp-validation-for="ComponentComputer.Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ComponentComputer.ProcessorId" class="control-label"></label>
+                <input asp-for="ComponentComputer.ProcessorId" class="form-control" />
+                <span asp-validation-for="ComponentComputer.ProcessorId" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="Processor.Image" class="control-label"></label>
+                <input asp-for="Processor.Image" class="form-control" />
+                <span asp-validation-for="Processor.Image" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="ComponentComputer.HardDriveId" class="control-label"></label>
+                <input asp-for="ComponentComputer.HardDriveId" class="form-control" />
+                <span asp-validation-for="ComponentComputer.HardDriveId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComponentComputer.MotherBoardId" class="control-label"></label>
+                <input asp-for="ComponentComputer.MotherBoardId" class="form-control" />
+                <span asp-validation-for="ComponentComputer.MotherBoardId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComponentComputer.VideoCardId" class="control-label"></label>
+                <input asp-for="ComponentComputer.VideoCardId" class="form-control" />
+                <span asp-validation-for="ComponentComputer.VideoCardId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComponentComputer.RamId" class="control-label"></label>
+                <input asp-for="ComponentComputer.RamId" class="form-control" />
+                <span asp-validation-for="ComponentComputer.RamId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComponentComputer.UnitId" class="control-label"></label>
+                <input asp-for="ComponentComputer.UnitId" class="form-control" />
+                <span asp-validation-for="ComponentComputer.UnitId" class="text-danger"></span>
+            </div>
+            
+            
+            <div class="my-4 ms-5">
+                <div class="d-grid gap-2   d-md-flex ms-5">
+                    <input type="submit" value="Save" class="btn btn-success me-md-2 col-3"/>
+                    <a asp-page="Index" class="btn btn-primary col-3">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

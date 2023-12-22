@@ -1,0 +1,86 @@
+﻿@page
+@model LB_2.Pages.Processors.DeleteModel
+
+
+@* <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="deleteSwitch"/>
+    <label class="form-check-label" >Enable Delete</label>
+</div>
+<hr/> *@
+<partial name="Feature/DeleteSwitch" model="new LB_2.Pages.DeleteSwitchModel()" />
+<div>
+    <h4>Processor</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.Id)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.Name)
+        </dd>
+        
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.SocketType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.SocketType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.ProcessorFamily)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.ProcessorFamily)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.ProcessorGeneration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.ProcessorGeneration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.NumCores)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.NumCores)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.NumThreads)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.NumThreads)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.ClockFrequency)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.ClockFrequency)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Processor.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Processor.Price)
+        </dd>
+       
+    </dl>
+    <form method="post" class="ms-5">
+        <input type="hidden" asp-for="Processor.Id" />
+
+        <input type="submit" id="deleteButton" value="Delete" class="btn btn-danger me-md-2" disabled />
+        <a asp-page="./Index" class="btn btn-primary">Back to List</a>
+    </form>
+
+  
+</div>
+
+@section Scripts
+{
+    <script src="~/js/deleteSwitch.js"></script>
+}

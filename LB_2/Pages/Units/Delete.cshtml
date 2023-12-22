@@ -1,0 +1,76 @@
+﻿@page
+@model LB_2.Pages.Units.DeleteModel
+
+
+@* <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="deleteSwitch" />
+    <label class="form-check-label">Enable Delete</label>
+</div>
+<hr /> *@
+<partial name="Feature/DeleteSwitch" model="new LB_2.Pages.DeleteSwitchModel()" />
+<div>
+    <h4>Unit</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Unit.Id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Unit.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit.Name)
+        </dd>
+        @* <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Processor.Image)
+        </dt>
+        <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Processor.Image)
+        </dd> *@
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Unit.FormFactorMotherBoard)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit.FormFactorMotherBoard)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Unit.Length)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit.Length)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Unit.Width)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit.Width)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Unit.Height)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit.Height)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Unit.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit.Price)
+        </dd>
+    </dl>
+    
+    <form method="post" class="ms-5">
+        <input type="hidden" asp-for="Unit.Id" />
+
+        <input type="submit" id="deleteButton" value="Delete" class="btn btn-danger me-md-2" disabled />
+        <a asp-page="./Index" class="btn btn-primary">Back to List</a>
+    </form>
+</div>
+@section Scripts
+{
+    <script src="~/js/deleteSwitch.js"></script>
+}
