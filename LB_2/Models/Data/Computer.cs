@@ -6,8 +6,6 @@ public class Computer : IEntity
 
     public string Name { get; set; }
 
-    public float Price { get; set; }
-
     public DateTime CreatedDate { get; set; }
 
     public DateTime LastUpdatedDate { get; set; }
@@ -15,6 +13,7 @@ public class Computer : IEntity
     public string? Image { get; set; }
 
     public int? ComponentComputerId { get; set; }
+    public float Price { get; set; }
 
     public ComponentComputer? ComponentComputer { get; set; }
 }
